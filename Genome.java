@@ -15,18 +15,18 @@ public class Genome {
             char i1 = dnaIn.charAt(a);
             char i2 = dnaIn.charAt(b);
             if('A' == i1 & 'T' == i2 || 'a' == i1 & 't' == i2) {
-                System.out.println("водородная связь формир аденин—тимин");
+                System.out.println("hydrogen bond forms adenine-thymine");
                 at++;
             }
             if('G' == i1 & 'C' == i2 || 'g' == i1 & 'c' == i2) {
-                System.out.println("водородная связь формир гуанин—цитозин");
+                System.out.println("hydrogen bond forms guanine - cytosine");
                 gc++;
             }
 
         }
-        System.out.println("Всего A-T: " + at);
-        System.out.println("Всего G-C: " + gc);
-        System.out.println("Всего водородных связей: " + (at+gc));
+        System.out.println("Total A-T: " + at);
+        System.out.println("Total G-C: " + gc);
+        System.out.println("Total hydrogen bonds: " + (at+gc));
     }
     
     /**
@@ -56,7 +56,7 @@ public class Genome {
                     dnaOutStr += "G";
                     break;
                 default:
-                    System.err.println("not mol");
+                    System.err.println("not molecule");
             }
         }
         return dnaOutStr;
