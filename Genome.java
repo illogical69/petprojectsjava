@@ -3,6 +3,11 @@ public class Genome {
 
     public Genome(){}
 
+    /**
+    * @program dnaIn        DNA is introduced for verification and counting of
+    *                       purine-pyrimidine base pairing AT or GC
+    */
+    
     public void dnaMolecule(String dnaIn){
         int at = 0;
         int gc = 0;
@@ -23,7 +28,13 @@ public class Genome {
         System.out.println("Всего G-C: " + gc);
         System.out.println("Всего водородных связей: " + (at+gc));
     }
-
+    
+    /**
+    * @program dna      dna polynucleotide chain is introduced for complementarity,
+    *                   the addition of appropriate hydrogen bonds
+    * @return dnaOutStr polynucleotide chain complementary to dna
+    */
+    
     public String addPolynucleotideChain(char[]dna) {
         String dnaOutStr = new String();
         for (int i = 0; dna.length > i; i++) {
